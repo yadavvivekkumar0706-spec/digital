@@ -1,39 +1,78 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <head>
-    <title>Digital List</title>
- 
-    <title>Digital List</title>
+<html lang="en">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital — Shopping List</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
-    
-</head>
-    <button id="create-list-btn">+ Create New List</button>
-</head><div id="create-list-form" class="create-list-form">
-    <input type="text" id="list-name" placeholder="Enter list name">
-    <button id="save-list-btn">Create</button>
-</div>
 
 <body>
 
-    <h1>Digital List</h1>
+    <!-- MAIN INTRO -->
 
-<button>+ Create New List</button>
+    <main>
 
-<h2>My Lists</h2>
+        <h1>DIGITAL</h1>
 
-<div id="lists-container">
+        <h2>SHOPPING LIST</h2>
 
-    <div class="list-card">
-        <h3>🛒 Grocery Shopping</h3>
-        <p>0 / 5 completed</p>
-    </div>
+        <p>
+            Organize your shopping, simply and beautifully.
+        </p>
 
-</div>
 
-</div> 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+        <!-- CREATE LIST -->
+
+        <button id="create-list-btn">
+            + CREATE NEW LIST
+        </button>
+
+
+        <!-- CREATE LIST FORM -->
+
+        <div id="create-list-form"
+             class="create-list-form">
+
+            <input
+                type="text"
+                id="list-name"
+                placeholder="Enter list name"
+            >
+
+            <button id="save-list-btn">
+                Create
+            </button>
+
+        </div>
+
+
+        <!-- LIST SECTION -->
+
+        <section>
+
+            <h2>MY LISTS</h2>
+
+            <div id="lists-container">
+
+                <!-- Lists will be created here by JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
+
 </html>

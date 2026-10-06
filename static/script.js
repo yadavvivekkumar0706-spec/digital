@@ -25,6 +25,22 @@ function updateProgress(list, progress) {
 function displayLists() {
 
     listsContainer.innerHTML = "";
+    if (lists.length === 0) {
+
+    listsContainer.innerHTML = `
+        <div class="empty-state">
+            <div class="empty-icon">🛒</div>
+
+            <h3>No lists yet</h3>
+
+            <p>
+                Create your first shopping list to get started.
+            </p>
+        </div>
+    `;
+
+    return;
+}
 
     lists.forEach(function(list, listIndex) {
 
